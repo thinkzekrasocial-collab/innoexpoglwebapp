@@ -9,9 +9,9 @@ export const GetInvolved = () => {
   const pathways = [
     {
       title: "Join as a Player",
-      desc: "Form a team with friends or join solo to take part in the 2026 Bangladesh National Qualifier.",
-      action: "Register team",
-      link: "/register",
+      desc: "Learn about the World Robot Games pathway and how InnoExpo GL is involved in the Bangladesh round.",
+      action: "Ask about the event",
+      link: "/contact",
     },
     {
       title: "Mentor a Team",

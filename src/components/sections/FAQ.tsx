@@ -7,7 +7,7 @@ import AppleReveal from "@/components/ui/apple-reveal";
 
 interface FAQItem {
   id: string;
-  category: "General" | "Games" | "Rules" | "Japan Trip" | "Registration";
+  category: "General" | "Games" | "Rules" | "Japan Trip";
   question: string;
   answer: string;
 }
@@ -22,27 +22,20 @@ const faqData: FAQItem[] = [
   },
   {
     id: "2",
-    category: "Registration",
-    question: "How do I register my team?",
-    answer:
-      "You can register directly on the InnoExpo GL website. Choose your game category, enter your team member details, and submit your registration.",
-  },
-  {
-    id: "3",
     category: "Japan Trip",
     question: "When and where is the Japan International Round?",
     answer:
       "The 2026 World Finals will be held at Chiba Port Arena in Japan from November 16 to 19, 2026. Top winners from the Bangladesh round will travel to Japan to compete.",
   },
   {
-    id: "4",
+    id: "3",
     category: "Games",
     question: "What game categories can I join?",
     answer:
       "You can join Soccer Robot 1x1 (ages 8–99), Line Following Robot (Junior 8–14 and Senior 15–19), Innovative Project (Junior & Senior), and OMG Shoot the Ball (Junior 8–14).",
   },
   {
-    id: "5",
+    id: "4",
     category: "Rules",
     question: "Where can I find the official rulebooks?",
     answer:
@@ -54,7 +47,7 @@ export const FAQ = () => {
   const [activeCategory, setActiveCategory] = useState<string>("All");
   const [openIds, setOpenIds] = useState<Record<string, boolean>>({ "1": true });
 
-  const categories = ["All", "General", "Games", "Rules", "Japan Trip", "Registration"];
+  const categories = ["All", "General", "Games", "Rules", "Japan Trip"];
 
   const filteredFAQs =
     activeCategory === "All"

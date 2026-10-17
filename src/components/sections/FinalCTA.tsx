@@ -22,16 +22,16 @@ export const FinalCTA = () => {
           </h2>
 
           <p className="text-sm sm:text-base text-zinc-600 font-normal max-w-2xl leading-relaxed mb-10">
-            Join the InnoExpo GL community today. Register for upcoming national qualifiers, connect with other builders, and take your robots to global stages like Japan.
+            Follow the World Robot Games journey with InnoExpo GL, from the Bangladesh round to the Japan finals. Contact our team to learn more about our involvement.
           </p>
 
           {/* Action Buttons */}
           <div className="flex flex-wrap items-center justify-start gap-4">
             <Link
-              href="/register"
+              href="/contact"
               className="inline-flex items-center gap-2 rounded-xl bg-zinc-950 text-white hover:bg-zinc-800 px-6 py-3 text-xs sm:text-sm font-semibold transition-all shadow-md shadow-zinc-900/10 active:scale-95"
             >
-              <span>Join InnoExpo GL</span>
+              <span>Contact InnoExpo GL</span>
               <ArrowRight className="w-3.5 h-3.5" />
             </Link>
 

@@ -44,7 +44,7 @@ const structuredData = {
       "@type": "FAQPage",
       mainEntity: [
         ["What is World Robot Games (WRG 2026)?", "World Robot Games is an international robotics tournament for students and young builders. The 2026 theme is RoboBuild: Engineering Sustainable Cities, where teams build robots to solve games and environmental challenges."],
-        ["How do I register my team?", "Register directly on the InnoExpo GL website by submitting the member registration form. The team will follow up by email."],
+        ["How is InnoExpo GL involved?", "InnoExpo GL is part of the World Robot Games journey in Bangladesh and helps present the pathway toward the Japan finals. Contact the team for event information."],
         ["When and where is the Japan International Round?", "The current event information is listed on the InnoExpo GL website and should be verified with the organizers before planning travel."],
         ["What game categories can I join?", "The current categories include Soccer Robot, Line Following Robot, Innovative Project, and Shoot the Ball."],
         ["Where can I find the official rulebooks?", "Official game rules and participation details should be confirmed with the InnoExpo GL team before joining."],

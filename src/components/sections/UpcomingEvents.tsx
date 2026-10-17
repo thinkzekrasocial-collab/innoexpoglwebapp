@@ -1,8 +1,7 @@
 "use client";
 
 import React from "react";
-import Link from "next/link";
-import { ArrowRight, MapPin, Clock } from "lucide-react";
+import { MapPin, Clock } from "lucide-react";
 import AppleReveal from "@/components/ui/apple-reveal";
 
 export const UpcomingEvents = () => {
@@ -12,7 +11,7 @@ export const UpcomingEvents = () => {
       category: "National Round",
       dateShort: "TBD",
       day: "2026",
-      status: "Date coming soon · Sign up early",
+      status: "InnoExpo GL event involvement",
       location: "Dhaka, Bangladesh",
       time: "Full Day Event",
     },
@@ -21,7 +20,7 @@ export const UpcomingEvents = () => {
       category: "World Championship",
       dateShort: "Nov",
       day: "16–19",
-      status: "Qualified Teams Only",
+      status: "InnoExpo GL event involvement",
       location: "Chiba Port Arena, Japan",
       time: "4-Day Global Tournament",
     },
@@ -41,7 +40,7 @@ export const UpcomingEvents = () => {
             <span className="font-serif italic font-light text-blue-600">one world stage.</span>
           </h2>
           <p className="text-sm sm:text-base text-zinc-600 font-normal mt-4 leading-relaxed">
-            Here are the key tournament dates. Sign up on InnoExpo GL to get ready.
+            Here are the key tournament dates and the path from the Bangladesh round to the Japan finals.
           </p>
         </AppleReveal>
       </div>
@@ -93,16 +92,10 @@ export const UpcomingEvents = () => {
               </AppleReveal>
             </div>
 
-            {/* CTA Button */}
+            {/* Event role */}
             <div className="lg:col-span-3 flex lg:justify-end">
               <AppleReveal delay={i * 0.2}>
-                <Link
-                  href="/register"
-                  className="inline-flex items-center gap-2 rounded-xl bg-zinc-950 hover:bg-zinc-800 text-white backdrop-blur-md px-5 py-2.5 text-xs sm:text-sm font-medium transition-all active:scale-95 shadow-md shadow-zinc-900/10"
-                >
-                  <span>Register Team</span>
-                  <ArrowRight className="w-3.5 h-3.5 text-white" />
-                </Link>
+                <span className="text-xs font-medium text-blue-600">Bangladesh to Japan pathway</span>
               </AppleReveal>
             </div>
           </div>

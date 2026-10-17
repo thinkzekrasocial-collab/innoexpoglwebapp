@@ -1,8 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import Link from "next/link";
-import { ArrowRight, Users, MapPin, Calendar, Building2 } from "lucide-react";
+import { Users, MapPin, Calendar, Building2 } from "lucide-react";
 import AppleReveal from "@/components/ui/apple-reveal";
 
 export const GlobalCompetitions = () => {
@@ -84,7 +83,7 @@ export const GlobalCompetitions = () => {
             <span className="font-serif italic font-light text-blue-600">Bangladesh round &amp; Japan finals</span>
           </h2>
           <p className="text-sm sm:text-base text-zinc-600 font-normal mt-4 leading-relaxed">
-            InnoExpo GL brings you the official Bangladesh qualifying rounds for WRG 2026 in partnership with Tech Autocrats. Pick your game, build your robot, and qualify for the World Finals in Japan.
+            InnoExpo GL is part of the World Robot Games journey in Bangladesh, supporting the local round and connecting the event story to the Japan finals. Explore the competition pathway and the role our organization plays in it.
           </p>
         </AppleReveal>
       </div>
@@ -123,7 +122,7 @@ export const GlobalCompetitions = () => {
                   <span className="text-[11px] font-medium px-2.5 py-0.5 rounded-full bg-zinc-100 border border-zinc-200 text-zinc-700">
                     {seg.division} · {seg.age}
                   </span>
-                  <span className="text-xs text-[var(--primary)] font-semibold">Register to join</span>
+                  <span className="text-xs text-[var(--primary)] font-semibold">WRG event category</span>
                 </div>
 
                 <h3 className="text-lg sm:text-xl font-serif text-zinc-950 mb-2.5">
@@ -139,13 +138,7 @@ export const GlobalCompetitions = () => {
                   <Users className="w-3.5 h-3.5 text-zinc-400" />
                   <span>{seg.teamSize}</span>
                 </span>
-                <Link
-                  href="/register"
-                  className="inline-flex items-center gap-1 text-zinc-900 font-medium hover:text-blue-600 transition-colors"
-                >
-                  <span>Register on InnoExpo GL</span>
-                  <ArrowRight className="w-3 h-3 text-zinc-400" />
-                </Link>
+                <span className="text-zinc-500 font-medium">Presented through InnoExpo GL</span>
               </div>
             </AppleReveal>
           </div>
@@ -169,10 +162,10 @@ export const GlobalCompetitions = () => {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {[
-              { num: "1", title: "Sign Up", desc: "Register your team on the InnoExpo GL platform." },
-              { num: "2", title: "Build & Test", desc: "Make your robot and test it on the competition field." },
-              { num: "3", title: "Win Locally", desc: "Compete and win in the Bangladesh National round." },
-              { num: "4", title: "Fly to Japan", desc: "Travel to Japan and compete against global teams." },
+              { num: "1", title: "Discover WRG", desc: "Learn how the Bangladesh round connects to the global event." },
+              { num: "2", title: "Build & Test", desc: "Make a robot and prepare for the competition field." },
+              { num: "3", title: "Bangladesh Round", desc: "Experience the local stage with the InnoExpo GL community." },
+              { num: "4", title: "Japan Finals", desc: "Follow the journey to the World Finals in Japan." },
             ].map((step, sIdx) => (
               <div
                 key={sIdx}
