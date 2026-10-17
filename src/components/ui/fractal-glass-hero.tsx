@@ -173,7 +173,7 @@ export const FractalGlassHero: React.FC<{ className?: string }> = ({ className =
     };
 
     const displacementTexture = textureLoader.load(
-      "https://raw.githubusercontent.com/miroleon/displacement_texture_freebie/main/assets/1K/jpeg/normal/ml-dpt-21-1K_normal.jpeg",
+      "https://raw.githubusercontent.com/miroleon/displacement_texture/main/assets/1K/jpeg/normal/ml-dpt-21-1K_normal.jpeg",
       (tex) => {
         tex.minFilter = THREE.NearestFilter;
         tex.wrapS = THREE.RepeatWrapping;

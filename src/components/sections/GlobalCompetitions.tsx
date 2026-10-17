@@ -15,7 +15,6 @@ export const GlobalCompetitions = () => {
       division: "Open",
       age: "Ages 8–99",
       teamSize: "1 player",
-      fee: "300 BDT",
       tag: "Soccer",
       desc: "Play 1-on-1 robot football on a mini walled pitch. Control your robot or make it autonomous and score more goals than your rival.",
     },
@@ -25,7 +24,6 @@ export const GlobalCompetitions = () => {
       division: "Junior",
       age: "Ages 8–14",
       teamSize: "1 player",
-      fee: "300 BDT",
       tag: "Line Following",
       desc: "Build an autonomous robot that follows a black line track with sharp turns and finishes the race in the shortest time.",
     },
@@ -35,7 +33,6 @@ export const GlobalCompetitions = () => {
       division: "Senior",
       age: "Ages 15–19",
       teamSize: "1 player",
-      fee: "300 BDT",
       tag: "Line Following",
       desc: "Fast-speed line following challenge. Tune your light sensors and motor speed to race through difficult curves cleanly.",
     },
@@ -45,7 +42,6 @@ export const GlobalCompetitions = () => {
       division: "Junior",
       age: "Ages 8–14",
       teamSize: "1–2 members",
-      fee: "600 BDT",
       tag: "RoboBuild",
       desc: "Build an original robot project that solves a city or environment problem. Present your working demo to the judges.",
     },
@@ -55,7 +51,6 @@ export const GlobalCompetitions = () => {
       division: "Senior",
       age: "Ages 15–19",
       teamSize: "1–2 members",
-      fee: "600 BDT",
       tag: "RoboBuild",
       desc: "Design and build a smart robotics invention for sustainable and green cities. Show your project prototype and live demo.",
     },
@@ -65,7 +60,6 @@ export const GlobalCompetitions = () => {
       division: "Junior",
       age: "Ages 8–14",
       teamSize: "1 player",
-      fee: "300 BDT",
       tag: "Shoot the Ball",
       desc: "A fun one-minute challenge. Your robot must follow the track, pick up ping-pong balls, and shoot them into the goal.",
     },
@@ -129,9 +123,7 @@ export const GlobalCompetitions = () => {
                   <span className="text-[11px] font-medium px-2.5 py-0.5 rounded-full bg-zinc-100 border border-zinc-200 text-zinc-700">
                     {seg.division} · {seg.age}
                   </span>
-                  <span className="text-xs text-blue-600 font-semibold">
-                    {seg.fee}
-                  </span>
+                  <span className="text-xs text-[var(--primary)] font-semibold">Register to join</span>
                 </div>
 
                 <h3 className="text-lg sm:text-xl font-serif text-zinc-950 mb-2.5">

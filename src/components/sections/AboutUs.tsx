@@ -37,7 +37,7 @@ export const AboutUs = () => {
           },
           {
             title: "Rural & Underserved Access",
-            desc: "Bridging the resource gap by providing free hardware and mentoring to students across all backgrounds.",
+            desc: "Bridging the resource gap with hardware guidance and mentoring for students across different backgrounds.",
           },
           {
             title: "Pathway to Global Stages",
@@ -66,7 +66,7 @@ export const AboutUs = () => {
         </AppleReveal>
         <AppleReveal delay={0.15}>
           <Link
-            href="/about"
+            href="#what-we-do"
             className="inline-flex items-center gap-2 rounded-xl bg-white hover:bg-zinc-100 text-zinc-800 backdrop-blur-md px-5 py-2.5 border border-zinc-200 text-xs sm:text-sm font-medium transition-all hover:border-zinc-300 active:scale-95 shadow-xs"
           >
             <span>Learn More About Us</span>

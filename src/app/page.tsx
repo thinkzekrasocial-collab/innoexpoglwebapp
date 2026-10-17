@@ -1,81 +1,74 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import Footer from "@/components/Footer";
-import { ShaderBackground } from "@/components/ui/waves-background";
 import ScrollToTop from "@/components/ui/scroll-to-top";
-
-// Landing Page Sections
 import AboutUs from "@/components/sections/AboutUs";
 import WhatWeDo from "@/components/sections/WhatWeDo";
 import GlobalCompetitions from "@/components/sections/GlobalCompetitions";
 import UpcomingEvents from "@/components/sections/UpcomingEvents";
-import BlogsNews from "@/components/sections/BlogsNews";
 import GetInvolved from "@/components/sections/GetInvolved";
 import FAQ from "@/components/sections/FAQ";
 import FinalCTA from "@/components/sections/FinalCTA";
+import { defaultDescription, siteName, siteUrl } from "@/lib/seo";
+
+const structuredData = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": `${siteUrl}/#organization`,
+      name: siteName,
+      url: siteUrl,
+      logo: `${siteUrl}/34f688d1-e284-4351-b20f-540fa95d61fc-nobg.png`,
+      email: "innoexpomember@gmail.com",
+      sameAs: ["https://www.instagram.com/innoexpo.gl", "https://x.com/InnoExpoGL"],
+    },
+    {
+      "@type": "WebSite",
+      "@id": `${siteUrl}/#website`,
+      name: siteName,
+      url: siteUrl,
+      publisher: { "@id": `${siteUrl}/#organization` },
+      description: defaultDescription,
+    },
+    {
+      "@type": "WebPage",
+      "@id": `${siteUrl}/#webpage`,
+      name: "InnoExpo GL | Student Robotics & STEM in Bangladesh",
+      url: siteUrl,
+      isPartOf: { "@id": `${siteUrl}/#website` },
+      about: { "@id": `${siteUrl}/#organization` },
+      description: defaultDescription,
+    },
+    {
+      "@type": "FAQPage",
+      mainEntity: [
+        ["What is World Robot Games (WRG 2026)?", "World Robot Games is an international robotics tournament for students and young builders. The 2026 theme is RoboBuild: Engineering Sustainable Cities, where teams build robots to solve games and environmental challenges."],
+        ["How do I register my team?", "Register directly on the InnoExpo GL website by submitting the member registration form. The team will follow up by email."],
+        ["When and where is the Japan International Round?", "The current event information is listed on the InnoExpo GL website and should be verified with the organizers before planning travel."],
+        ["What game categories can I join?", "The current categories include Soccer Robot, Line Following Robot, Innovative Project, and Shoot the Ball."],
+        ["Where can I find the official rulebooks?", "Official game rules and participation details should be confirmed with the InnoExpo GL team before joining."],
+      ].map(([name, text]) => ({ "@type": "Question", name, acceptedAnswer: { "@type": "Answer", text } })),
+    },
+  ],
+};
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-[#f0f7ff] text-zinc-900 flex flex-col justify-between selection:bg-blue-600 selection:text-white relative">
-      
-      {/* 1. Fixed Floating Glass Pill Header */}
+    <main className="min-h-screen bg-[var(--background)] text-[var(--text)]">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
       <Header />
-
-      {/* 2. Unified Hero Backdrop with Light Sky Shader Flow */}
-      <div className="relative w-full overflow-hidden">
-        {/* Waves Animation: Soft sky waves fading into pure white */}
-        <div className="absolute inset-x-0 top-0 h-[620px] sm:h-[680px] pointer-events-none overflow-hidden [mask-image:radial-gradient(ellipse_80%_75%_at_50%_15%,black_30%,rgba(0,0,0,0.5)_60%,transparent_85%)]">
-          <ShaderBackground className="w-full h-full opacity-80" />
-        </div>
-
-        {/* Ambient Sky Blue Glow Base */}
-        <div
-          aria-hidden="true"
-          className="pointer-events-none absolute -top-10 left-1/2 -translate-x-1/2 w-[720px] h-[450px] bg-blue-500/10 blur-[120px] rounded-full"
-        />
-
-        {/* Soft Light Fade Layer */}
-        <div
-          aria-hidden="true"
-          className="pointer-events-none absolute inset-0 h-[720px] bg-[radial-gradient(ellipse_90%_80%_at_50%_30%,transparent_30%,rgba(240,247,255,0.7)_65%,#f0f7ff_95%)]"
-        />
-
-        {/* Hero Content */}
-        <Hero />
-      </div>
-
-      {/* 3. Structured Architectural Grid Sections */}
-      <div className="relative z-10 w-full max-w-7xl mx-auto border-x border-zinc-200">
-        
-        {/* 1. About Us Section */}
+      <Hero />
+      <div className="mx-auto w-full max-w-[1120px] border-x border-[var(--line)] bg-[var(--surface)]">
         <AboutUs />
-
-        {/* 2. What We Do Section */}
         <WhatWeDo />
-
-        {/* 3. Global Competitions (WRG 2026 Segments & Road to Japan) */}
         <GlobalCompetitions />
-
-        {/* 4. Upcoming Events & Schedules */}
         <UpcomingEvents />
-
-        {/* 5. Blogs & Editorial News */}
-        <BlogsNews />
-
-        {/* 6. Get Involved Pathways */}
         <GetInvolved />
-
-        {/* 7. Structured 2-Column FAQ Section with Vertical Divider */}
         <FAQ />
-
-        {/* 8. Final High-Impact CTA Banner */}
         <FinalCTA />
       </div>
-
-      {/* Atmospheric Footer */}
       <Footer />
-
-      {/* Go To Top & Scroll Pointer Progress Ring */}
       <ScrollToTop />
     </main>
   );

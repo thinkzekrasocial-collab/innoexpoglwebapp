@@ -21,11 +21,11 @@ export const Programs = () => {
       highlights: ["GPU Cloud Compute Credits", "Paper Publishing Support", "CERN/MIT Alumni Mentors"],
     },
     {
-      title: "Open Science Hardware Grant",
+      title: "Open Science Hardware",
       category: "Independent Innovators",
       duration: "Rolling Applications",
-      desc: "Equity-free seed grants ranging from $5,000 to $25,000 awarded directly to high-impact scientific prototypes and hardware tools.",
-      highlights: ["$5K–$25K Seed Funding", "Lab Testing Facilities", "Patent & IP Guidance"],
+      desc: "A pathway for independent innovators developing scientific prototypes and hardware tools.",
+      highlights: ["Prototype Guidance", "Lab Testing Facilities", "Technical Reviews"],
     },
     {
       title: "Olympiad Masterclass Series",

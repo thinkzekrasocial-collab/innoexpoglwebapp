@@ -1,47 +1,28 @@
 import type { Metadata, Viewport } from "next";
-import { Inter } from "next/font/google";
+import { DM_Sans, DM_Serif_Display } from "next/font/google";
 import "./globals.css";
 import SmoothScrollProvider from "@/components/ui/smooth-scroll-provider";
+import { defaultDescription, siteName, siteUrl } from "@/lib/seo";
 
-const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-inter",
-  display: "swap",
-});
+const body = DM_Sans({ subsets: ["latin"], variable: "--font-body", display: "swap" });
+const heading = DM_Serif_Display({ subsets: ["latin"], variable: "--font-heading", weight: "400", display: "swap" });
 
-export const viewport: Viewport = {
-  width: "device-width",
-  initialScale: 1,
-  themeColor: "#f0f7ff",
-};
-
+export const viewport: Viewport = { width: "device-width", initialScale: 1, themeColor: "#f7f8fa" };
 export const metadata: Metadata = {
-  title: "InnoExpo GL — Pupil-Led STEM Innovation Platform",
-  description:
-    "InnoExpo GL is a non-profit innovation platform run by pupils making STEM education accessible, providing project materials, mentorship, and pathways to national and global stages.",
-  keywords: [
-    "InnoExpo GL",
-    "STEM Education",
-    "Youth Robotics",
-    "World Robot Games 2026",
-    "Project-Based Learning",
-    "Bangladesh Science Olympiad",
-  ],
-  authors: [{ name: "InnoExpo GL Organization" }],
+  metadataBase: new URL(siteUrl),
+  title: { default: "InnoExpo GL | Student Robotics & STEM in Bangladesh", template: "%s | InnoExpo GL" },
+  description: defaultDescription,
+  applicationName: siteName,
+  authors: [{ name: siteName }],
+  creator: siteName,
+  publisher: siteName,
+  keywords: ["Bangladesh robotics competition", "student robotics competition", "STEM education Bangladesh", "youth robotics", "robotics mentorship", "student innovation projects"],
+  alternates: { canonical: "/" },
+  openGraph: { type: "website", locale: "en_US", url: siteUrl, siteName, title: "InnoExpo GL | Student Robotics & STEM in Bangladesh", description: defaultDescription, images: [{ url: "/34f688d1-e284-4351-b20f-540fa95d61fc-nobg.png", alt: "InnoExpo GL logo" }] },
+  twitter: { card: "summary", title: "InnoExpo GL | Student Robotics & STEM in Bangladesh", description: defaultDescription, images: ["/34f688d1-e284-4351-b20f-540fa95d61fc-nobg.png"] },
+  robots: { index: true, follow: true },
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
-  return (
-    <html lang="en" className="light scroll-smooth">
-      <body className={`${inter.className} min-h-screen bg-[#f0f7ff] text-zinc-900 antialiased selection:bg-blue-600 selection:text-white`}>
-        <SmoothScrollProvider>
-          {children}
-        </SmoothScrollProvider>
-      </body>
-    </html>
-  );
+export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
+  return <html lang="en" className={`${body.variable} ${heading.variable}`}><body><SmoothScrollProvider>{children}</SmoothScrollProvider></body></html>;
 }

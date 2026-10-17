@@ -48,13 +48,6 @@ const faqData: FAQItem[] = [
     answer:
       "Every game has clear rules explaining robot dimensions, weight limits, and playing field measurements. You can read and download the rulebooks before joining.",
   },
-  {
-    id: "6",
-    category: "Registration",
-    question: "How much is the registration fee?",
-    answer:
-      "Solo player categories (like Soccer 1x1, Line Robot, and Shoot the Ball) are 300 BDT. Team project categories (like Innovative Project for 1–2 members) are 600 BDT.",
-  },
 ];
 
 export const FAQ = () => {

@@ -32,8 +32,8 @@ export const WhatWeDo = () => {
     {
       num: "03",
       icon: Package,
-      title: "Free Project Materials",
-      desc: "Selected projects are provided with required materials at no charge. This removes financial barriers so good ideas are never limited by economic background.",
+      title: "Project Materials",
+      desc: "Students get guidance on the materials and tools required to turn a good idea into a working prototype.",
     },
     {
       num: "04",
@@ -78,7 +78,7 @@ export const WhatWeDo = () => {
             <span className="font-serif italic font-light text-blue-600">the global stage</span>
           </h2>
           <p className="text-sm sm:text-base text-zinc-600 font-normal mt-4 leading-relaxed">
-            InnoExpo GL supports students through every step of their project journey with training, free resources, coaching, and international pathways.
+            InnoExpo GL supports students through every step of their project journey with training, practical resources, coaching, and international pathways.
           </p>
         </AppleReveal>
       </div>
