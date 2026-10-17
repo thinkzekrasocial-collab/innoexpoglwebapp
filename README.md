@@ -1,27 +1,24 @@
-# Inno Expo GL
+# InnoExpo GL
 
-The official platform for **Inno Expo GL** — an international non-profit platform for science, robotics, and youth innovation.
+The InnoExpo GL website is a Next.js App Router site for student robotics, STEM learning, mentorship, and member registration.
 
-## Features
-- **Featured Competition:** World Robot Games (WRG 2026) Bangladesh Pathway & Japan Finals at Chiba Port Arena.
-- **Classic Minimal Editorial Dark UI:** Built with Next.js (App Router), Tailwind CSS, Framer Motion, and Three.js / WebGL fluid wave shader.
-- **Lenis Smooth Scroll:** Luxury momentum smooth scrolling synced with `requestAnimationFrame`.
-- **Apple-Style SaaS Text & Scroll Animations:** Interactive blur and upward drift reveals triggered dynamically on scroll.
-- **Architectural Grid System:** Continuous vertical and horizontal structural lines.
-- **Custom Sapphire Blue Scrollbar & Circular Progress Pointer:** Integrated floating Go-to-Top trigger with scroll progress ring.
-
-## Getting Started
-
-First, run the development server:
+## Run locally
 
 ```bash
+npm install
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-## Build for Production
+## Build
 
 ```bash
 npm run build
 ```
+
+## Registration
+
+The member form posts through FormSubmit AJAX to `innoexpomember@gmail.com`. Complete FormSubmit's one-time activation email before launch.
+
+## SEO
+
+Set `NEXT_PUBLIC_SITE_URL` to the final site origin before deployment. The app generates `/sitemap.xml` and `/robots.txt` automatically.
